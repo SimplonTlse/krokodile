@@ -2,13 +2,11 @@
 
 <h1>Krokodile</h1>
 
-
+<ul>
 <?php
-$foo = new Bidule();
-if($foo->getTruc()) {
-	echo 'le truc est vrai';
-} else {
-	echo 'le truc est faux';
-} ?>
-
+$counters = new Counter();
+foreach($counters->all() as $c) : ?>
+	<li><a href="?id=<?php echo $c->id ?>&p=show"><?php echo $c->name ?></a></li>
+<?php endforeach ?>
+</ul>
 <?php include 'foot.part.php' ?>
