@@ -1,8 +1,8 @@
 <?php
 
 require 'functions.php';
+require 'classes/Bidule.php';
+require 'classes/Router.php';
 
-
-//temporatire pour tester
-
-require '../views/home.php';
+$r = new Router();
+$r->get();
