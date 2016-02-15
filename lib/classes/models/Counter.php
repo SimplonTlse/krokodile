@@ -11,5 +11,11 @@ class Counter {
 	public function add(){}
 	public function edit($id){}
 
-	public function increment($id){}
+	public function increment($id){
+		$counter = ORM::for_table('counters')->find_one($id);
+		$counter->count = $counter->count + 1;
+		
+		$counter->save();
+		return $counter->count;
+	}
 }

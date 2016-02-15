@@ -4,8 +4,8 @@ $C = new Counter();
 $counter = $C->get($_GET['id']);
 ?>
 <h1>Show time </h1>
-<h2><?php echo $counter->name ?> : <?php echo $counter->count ?></h2>
-<button>+</button>
+<h2><?php echo $counter->name ?> : <span id="herecomethenumber"><?php echo $counter->count ?></span></h2>
+<button counter-id="<?php echo $counter->id ?>">+</button>
 
 
 
